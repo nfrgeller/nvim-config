@@ -1,0 +1,23 @@
+---
+jupyter: python3
+title: "Title"
+author: "Noah Geller"
+date: "9/27/2024"
+date-modified: "9/27/2024" 
+abstract-title: "Summary"
+abstract: "Put Summary Here"
+format:
+  html:
+    theme: 
+      light: pulse
+      dark: darkly
+    toc: true
+    toc-location: left-body 
+    toc-title: Contents
+    toc-expand: 2 
+    number-sections: true
+    code-fold: show
+    code-copy: true 
+    code-tools: true
+    highlight-style: nord
+---

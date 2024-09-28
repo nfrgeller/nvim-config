@@ -5,6 +5,7 @@ vim.cmd [[
   highlight NonText ctermbg=none
 ]]
 
+
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`
@@ -13,6 +14,13 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
   callback = function()
     vim.highlight.on_yank()
+  end,
+})
+
+vim.api.nvim_create_autocmd("BufNewFile", {
+  pattern = "*.qmd",
+  callback = function()
+    vim.cmd("0r ~/.config/nvim/templates/quarto-template.qmd")
   end,
 })
 
