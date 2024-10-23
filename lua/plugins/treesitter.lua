@@ -1,11 +1,16 @@
 return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
+    commit = "ef52e44",
     config = function()
         local configs = require("nvim-treesitter.configs")
 
         configs.setup({
             ensure_installed = {
+                -- "markdown_inline",
+                -- "markdown",
+                "latex",
+                "r",
                 "c",
                 "cpp",
                 "lua",

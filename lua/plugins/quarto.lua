@@ -15,10 +15,23 @@ return {
 			vim.keymap.set("n", "<leader>qsj", "i```{julia}<CR>```<Esc>O")
 			vim.keymap.set("n", "<leader>qsr", "i```{r}<CR>```<Esc>O")
 			vim.keymap.set("n", "<leader>qso", "i```{ojs}<CR>```<Esc>O")
+			vim.keymap.set("n", "<leader>qsc", "i```<CR>```<Esc>O")
 			vim.keymap.set("n", "<leader>qip", "i`{python}`<Esc>i")
 			vim.keymap.set("n", "<leader>qij", "i`{julia}`<Esc>i")
+			vim.keymap.set("n", "<leader>qir", "i`{r}`<Esc>i")
+			vim.keymap.set("n", "<leader>qic", "i``<Esc>i")
 		end,
 	},
 
-	{ "jmbuhr/otter.nvim" },
+	{
+		"jmbuhr/otter.nvim",
+		config = function()
+			require("otter").setup({
+				lsp = {
+					auto_attach = true,              -- Auto attach to Quarto files
+					filetypes = { "markdown", "quarto" }, -- Treat .qmd files as markdown
+				},
+			})
+		end,
+	},
 }

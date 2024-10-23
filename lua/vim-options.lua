@@ -5,6 +5,10 @@ vim.cmd [[
   highlight NonText ctermbg=none
 ]]
 
+-- for denols
+vim.g.markdown_fenced_languages = {
+  "ts=typescript"
+}
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode

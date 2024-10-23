@@ -9,7 +9,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "ruff", "clangd", "pyright" },
+				ensure_installed = { "lua_ls", "ruff", "clangd", "pyright", "denols" },
 			})
 		end,
 	},
@@ -24,7 +24,27 @@ return {
 				capabilities = capabilities,
 			})
 
+			lspconfig.denols.setup({
+				capabilities = capabilities,
+			})
+
 			lspconfig.ruff.setup({})
+
+			-- lspconfig.r_language_server.setup({
+			-- 	settings = {
+			-- 		R = {
+			-- 			lsp = {
+			-- 				linting = {
+			-- 					enabled = false, -- Disable linting
+			-- 				},
+			-- 				diagnostics = { enabled = false },
+			-- 			},
+			-- 		},
+			-- 	},
+			-- 	on_attach = function(client, bufnr)
+			-- 		-- Additional settings can be placed here
+			-- 	end,
+			-- })
 
 			lspconfig.clangd.setup({
 				capabilities = capabilities,

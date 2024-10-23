@@ -1,16 +1,16 @@
 ---
-jupyter: python3
+execute:
+  echo: true
+  eval: true
+  warning: true
+  error: true 
 title: "Title"
 author: "Noah Geller"
-date: "9/27/2024"
-date-modified: "9/27/2024" 
-abstract-title: "Summary"
-abstract: "Put Summary Here"
+date: "10/17/24"
+date-modified: "10/17/24" 
 format:
   html:
-    theme: 
-      light: pulse
-      dark: darkly
+    theme: pulse 
     toc: true
     toc-location: left-body 
     toc-title: Contents
