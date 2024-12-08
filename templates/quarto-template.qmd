@@ -4,20 +4,17 @@ execute:
   eval: true
   warning: true
   error: true 
+  cache: true 
 title: "Title"
 author: "Noah Geller"
-date: "10/17/24"
-date-modified: "10/17/24" 
+date: "12/07/24"
 format:
   html:
-    theme: pulse 
     toc: true
     toc-location: left-body 
     toc-title: Contents
     toc-expand: 2 
-    number-sections: true
     code-fold: show
     code-copy: true 
     code-tools: true
-    highlight-style: nord
 ---

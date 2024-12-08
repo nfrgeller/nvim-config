@@ -9,7 +9,17 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "ruff", "clangd", "pyright", "denols" },
+				ensure_installed = {
+					"rust_analyzer",
+					"lua_ls",
+					"ruff",
+					"clangd",
+					"pyright",
+					"denols",
+					"html",
+					"jsonls",
+					"bashls"
+				},
 			})
 		end,
 	},
@@ -28,43 +38,20 @@ return {
 				capabilities = capabilities,
 			})
 
+			lspconfig.rust_analyzer.setup({
+				capabilities = capabilities,
+			})
+
 			lspconfig.ruff.setup({})
 
-			-- lspconfig.r_language_server.setup({
-			-- 	settings = {
-			-- 		R = {
-			-- 			lsp = {
-			-- 				linting = {
-			-- 					enabled = false, -- Disable linting
-			-- 				},
-			-- 				diagnostics = { enabled = false },
-			-- 			},
-			-- 		},
-			-- 	},
-			-- 	on_attach = function(client, bufnr)
-			-- 		-- Additional settings can be placed here
-			-- 	end,
-			-- })
+			lspconfig.bashls.setup({})
+
+			lspconfig.jsonls.setup({})
 
 			lspconfig.clangd.setup({
 				capabilities = capabilities,
 			})
 
-			-- lspconfig.pyright.setup({
-			-- 	capabilities = capabilities,
-			-- 	settings = {
-			-- 		pyright = {
-			-- 			-- Using Ruff's import organizer
-			-- 			disableOrganizeImports = true,
-			-- 		},
-			-- 		python = {
-			-- 			analysis = {
-			-- 				-- Ignore all files for analysis to exclusively use Ruff for linting
-			-- 				ignore = { "*" },
-			-- 			},
-			-- 		},
-			-- 	},
-			-- })
 			require("lspconfig").pyright.setup({
 				settings = {
 					pyright = {
@@ -82,6 +69,10 @@ return {
 					-- Disable Pyright diagnostics (linting)
 					client.handlers["textDocument/publishDiagnostics"] = function() end
 				end,
+			})
+
+			lspconfig.html.setup({
+				capabilities = capabilities,
 			})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})

@@ -1,17 +1,17 @@
 return {
-	{
-		"EdenEast/nightfox.nvim",
-		lazy = false,  -- make sure we load this during startup if it is your main colorscheme
-		priority = 1000, -- make sure to load this before all the other start plugins
-		--options = {transparent = true,},
-		config = function()
-			vim.cmd([[colorscheme nightfox]])
-		end,
-	},
-	"cocopon/iceberg.vim",
-	config = function()
-		vim.cmd([[colorscheme iceberg]])
-	end,
+	-- {
+	-- 	"EdenEast/nightfox.nvim",
+	-- 	lazy = false,  -- make sure we load this during startup if it is your main colorscheme
+	-- 	priority = 1000, -- make sure to load this before all the other start plugins
+	-- 	--options = {transparent = true,},
+	-- 	config = function()
+	-- 		vim.cmd([[colorscheme nightfox]])
+	-- 	end,
+	-- },
+	-- "cocopon/iceberg.vim",
+	-- config = function()
+	-- 	vim.cmd([[colorscheme iceberg]])
+	-- end,
 	-- {
 	-- 	"NLKNguyen/papercolor-theme",
 	-- 	config = function()
@@ -26,7 +26,7 @@ return {
 	-- 	config = function()
 	-- 		-- Set the variant to Latte
 	-- 		require("catppuccin").setup({
-	-- 			flavour = "latte", -- Options: latte, frappe, macchiato, mocha
+	-- 			flavour = "macchiato", -- Options: latte, frappe, macchiato, mocha
 	-- 		})
 	-- 		-- Apply the colorscheme
 	-- 		vim.cmd("colorscheme catppuccin")
@@ -41,4 +41,26 @@ return {
 	-- 		vim.cmd("colorscheme zenbones")
 	-- 	end,
 	-- },
+	-- "olivercederborg/poimandres.nvim",
+	-- config = function()
+	-- 	vim.cmd([[colorscheme poimandres]])
+	-- end,
+	-- "zenbones-theme/zenbones.nvim",
+	-- dependencies = { "rktjmp/lush.nvim" }, -- Zenbones requires the lush.nvim dependency
+	-- config = function()
+	-- 	vim.cmd("set background=dark")
+	-- 	vim.cmd([[colorscheme ]])
+	-- end,
+	-- "",
+	-- config = function()
+	-- 	vim.cmd([[colorscheme nordic]])
+	-- end,
+	-- "rose-pine/neovim",
+	-- config = function()
+	-- 	vim.cmd("colorscheme rose-pine-main")
+	-- end,
+	"shaunsingh/nord.nvim",
+	config = function()
+		vim.cmd([[colorscheme nord]])
+	end,
 }
