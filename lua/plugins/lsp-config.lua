@@ -18,7 +18,7 @@ return {
 					"denols",
 					"html",
 					"jsonls",
-					"bashls"
+					"bashls",
 				},
 			})
 		end,
