@@ -1,20 +1,12 @@
 ---
+title: "Title"
+author: "Noah Geller"
+date: "01/06/25"
+description: Description.
 execute:
-  echo: true
   eval: true
+  echo: true
   warning: true
   error: true 
   cache: true 
-title: "Title"
-author: "Noah Geller"
-date: "12/26/24"
-format:
-  html:
-    toc: true
-    toc-location: left-body 
-    toc-title: Contents
-    toc-expand: 2 
-    code-fold: show
-    code-copy: true 
-    code-tools: true
 ---
