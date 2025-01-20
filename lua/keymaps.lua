@@ -10,4 +10,3 @@ vim.keymap.set("n", "<leader>b", "<cmd> Telescope buffers <CR>")
 vim.keymap.set("n", "<leader>z", "<cmd> Telescope current_buffer_fuzzy_find <CR>")
 vim.keymap.set("c", "W", "w")
 vim.keymap.set("c", "Q", "q")
-

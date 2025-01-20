@@ -5,36 +5,44 @@ vim.cmd([[
   highlight NonText ctermbg=none
 ]])
 
+-- Toggle pencil on when in .md or .qmd files
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+	pattern = { "*.md", "*.qmd" },
+	callback = function()
+		vim.cmd("Pencil")
+	end,
+})
+
 -- for denols
 vim.g.markdown_fenced_languages = {
-  "ts=typescript",
+	"ts=typescript",
 }
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`
 vim.api.nvim_create_autocmd("TextYankPost", {
-  desc = "Highlight when yanking (copying) text",
-  group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
+	desc = "Highlight when yanking (copying) text",
+	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+	callback = function()
+		vim.highlight.on_yank()
+	end,
 })
 
 -- Templates for file types
 
 vim.api.nvim_create_autocmd("BufNewFile", {
-  pattern = "*.cpp",
-  callback = function()
-    vim.cmd("0r ~/.config/nvim/templates/cpp-template.cpp")
-  end,
+	pattern = "*.cpp",
+	callback = function()
+		vim.cmd("0r ~/.config/nvim/templates/cpp-template.cpp")
+	end,
 })
 
 vim.api.nvim_create_autocmd("BufNewFile", {
-  pattern = "*.qmd",
-  callback = function()
-    vim.cmd("0r ~/.config/nvim/templates/quarto-template.qmd")
-  end,
+	pattern = "*.qmd",
+	callback = function()
+		vim.cmd("0r ~/.config/nvim/templates/quarto-template.qmd")
+	end,
 })
 
 -- Configure how new splits should be opened
