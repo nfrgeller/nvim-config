@@ -30,15 +30,11 @@ return {
 			local lspconfig = require("lspconfig")
 
 			-- setting up lsps
-			lspconfig.lua_ls.setup({
-				capabilities = capabilities,
-			})
+			lspconfig.lua_ls.setup({})
 
 			-- lspconfig.denols.setup({})
 
-			lspconfig.rust_analyzer.setup({
-				capabilities = capabilities,
-			})
+			lspconfig.rust_analyzer.setup({})
 
 			lspconfig.ruff.setup({})
 
@@ -48,9 +44,7 @@ return {
 
 			lspconfig.jsonls.setup({})
 
-			lspconfig.clangd.setup({
-				capabilities = capabilities,
-			})
+			lspconfig.clangd.setup({})
 
 			require("lspconfig").pyright.setup({
 				settings = {
