@@ -234,7 +234,7 @@ return {
 		}
 
 		dashboard.section.buttons.val = {
-			dashboard.button("SPC o", "FILE TREE", "<cmd> Oil ~ <CR>"),
+			dashboard.button("SPC o", "FILE TREE", "<cmd>Oil .<CR>"),
 			dashboard.button("SPC sf", "SEARCH FILES", "<cmd> Telescope find_files <CR>"),
 			dashboard.button("SPC c", "CONFIG", "<cmd> e ~/.config/nvim <CR>"),
 			dashboard.button("q", "QUIT", "<cmd> qa <CR>"),

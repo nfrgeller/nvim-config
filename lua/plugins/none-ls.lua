@@ -8,10 +8,10 @@ return {
 				-- null_ls.builtins.completion.spell,
 
 				null_ls.builtins.formatting.stylua,
-				null_ls.builtins.formatting.clang_format,
+				-- null_ls.builtins.formatting.clang_format,
 				null_ls.builtins.formatting.markdownlint,
-				null_ls.builtins.diagnostics.mypy,
-				null_ls.builtins.formatting.bibclean,
+				-- null_ls.builtins.diagnostics.mypy,
+				-- null_ls.builtins.formatting.bibclean,
 				-- null_ls.builtins.diagnostics.cppcheck,
 			},
 		})

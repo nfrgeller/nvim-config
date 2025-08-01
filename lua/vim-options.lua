@@ -13,6 +13,13 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 	end,
 })
 
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+	pattern = { "*.md", "*.qmd" },
+	callback = function()
+		vim.cmd("setlocal spell spelllang=en_us")
+	end,
+})
+
 -- for denols
 vim.g.markdown_fenced_languages = {
 	"ts=typescript",

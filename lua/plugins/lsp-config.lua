@@ -15,7 +15,7 @@ return {
 					"ruff",
 					"clangd",
 					"pyright",
-					"denols",
+					-- "denols",
 					"html",
 					"jsonls",
 					"bashls",
@@ -34,15 +34,15 @@ return {
 				capabilities = capabilities,
 			})
 
-			lspconfig.denols.setup({
-				capabilities = capabilities,
-			})
+			-- lspconfig.denols.setup({})
 
 			lspconfig.rust_analyzer.setup({
 				capabilities = capabilities,
 			})
 
 			lspconfig.ruff.setup({})
+
+			lspconfig.cmake.setup({})
 
 			lspconfig.bashls.setup({})
 
